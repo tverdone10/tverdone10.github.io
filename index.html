@@ -183,7 +183,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.27rem;
+  font-size: 1rem;
 }
 
 em {
@@ -260,6 +260,17 @@ section .location {
   font-weight: 300;
 }
 
+#skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Use four columns */
+}
+
+/* You can also adjust the width of each skill item if necessary */
+#skills .item {
+  /* Adjust the width as needed to fit four items in a row */
+  width: calc(25% - 0.25em); /* Subtract the desired gap width */
+  /* Add any other styling you want for each skill item */
+}
 #header .image {
   width: 11em;
   float: right;
@@ -799,7 +810,7 @@ section .location {
   
   <div id="resume">
     	<header id="header" class="clear">
-    		<div class="middle">
+          <div class="middle">
     			<h1 class="name">Thomas Verdone</h1>
     			<h2 class="label">Software Engineer at Karat Financial</h2>
     		</div>
@@ -843,7 +854,7 @@ section .location {
     
     	<section class="section">
     		<section class="main-summary">
-    			<div><p><p>I am an experienced App Developer with a strong focus on backend development. My expertise lies in TypeScript with Node.js and Python, as well as both SQL and NoSQL databases. In addition, I have ample experience with AWS, including building Lambdas with Serverless and SST, monitoring Cloudwatch logs, and utilizing S3 buckets. My passion for App Development stems from my lifelong interest in problem finding and problem solving. I thoroughly enjoy tackling engineering challenges and I'm confident that I can handle any challenge thrown my way.</p></p></div>
+    			<div><p><p>I am an experienced App Developer with a strong focus on backend development. My expertise lies in TypeScript with Node.js and Python, as well as both SQL and NoSQL databases. In addition, I have ample experience with AWS, including building Lambdas with Serverless and SST, and setting up monitoring Cloudwatch logs. My passion for App Development stems from my lifelong interest in problem finding and problem solving. I thoroughly enjoy tackling engineering challenges and I'm confident that I can handle any challenge thrown my way.</p></p></div>
     		</section>
     	</section>
 
@@ -857,8 +868,6 @@ section .location {
               Typescript
             </h3>
           <div class="skill-data">
-          <div class="subskills">
-          </div>
           </div>
     
     		</div>
@@ -867,8 +876,6 @@ section .location {
               PostgreSQL
             </h3>
           <div class="skill-data">
-          <div class="subskills">
-          </div>
           </div>
     
     		</div>
@@ -877,8 +884,6 @@ section .location {
               Node.js
             </h3>
           <div class="skill-data">
-          <div class="subskills">
-          </div>
           </div>
     
     		</div>
@@ -887,8 +892,6 @@ section .location {
               Serverless
             </h3>
           <div class="skill-data">
-          <div class="subskills">
-          </div>
           </div>
     
     		</div>
@@ -897,8 +900,6 @@ section .location {
               SST
             </h3>
           <div class="skill-data">
-          <div class="subskills">
-          </div>
           </div>
     
     		</div>
@@ -907,8 +908,6 @@ section .location {
               REST API
             </h3>
           <div class="skill-data">
-          <div class="subskills">
-          </div>
           </div>
     
     		</div>
@@ -917,8 +916,6 @@ section .location {
               GraphQL
             </h3>
           <div class="skill-data">
-          <div class="subskills">
-          </div>
           </div>
     
     		</div>
@@ -927,8 +924,6 @@ section .location {
               NoSQL
             </h3>
           <div class="skill-data">
-          <div class="subskills">
-          </div>
           </div>
     
     		</div>
@@ -937,8 +932,6 @@ section .location {
               Javascript
             </h3>
           <div class="skill-data">
-          <div class="subskills">
-          </div>
           </div>
     
     		</div>
@@ -947,8 +940,6 @@ section .location {
               Python
             </h3>
           <div class="skill-data">
-          <div class="subskills">
-          </div>
           </div>
     
     		</div>
@@ -957,8 +948,6 @@ section .location {
               React
             </h3>
           <div class="skill-data">
-          <div class="subskills">
-          </div>
           </div>
     
     		</div>
@@ -967,8 +956,6 @@ section .location {
               AWS
             </h3>
           <div class="skill-data">
-          <div class="subskills">
-          </div>
           </div>
     
     		</div>
@@ -999,13 +986,13 @@ section .location {
             <span class="fas fa-external-link-alt"></span>
             <a target="_blank" href="https://www.trykarat.com/">https://www.trykarat.com/</a>
           </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Played a critical role in the successful rebuilding of our fintech app from scratch, joining the backend development effort. To achieve this, I implemented various cutting-edge technologies using Apollo and Hasura servers, and AWS. Our team used PostgreSQL as our application database and Snowflake as our data warehouse to enable seamless data processing and analytics. </p></p></div>
+            <div class="summary"><p><p>Played a critical role in the successful rebuilding of our fintech app from scratch, joining the backend development effort. To achieve this, I implemented various technologies using Apollo with Typescript and Hasura servers, and AWS. Our team used PostgreSQL as our application database and Snowflake as our data warehouse to enable seamless data processing and analytics. </p></p></div>
             <ul class="highlights">
-              <li><p><p>Implemented backend systems that supported credit card reward programs for purchases made by our users. Additionally, I created a reward shop where users could redeem their points for various items, such as travel, cashback, and other experiences. The development process involved designing and developing a robust architecture, integrating with third-party APIs, and creating seamless user interfaces that simplified the reward redemption process.</p></p></li>
-              <li><p><p>Led the migration of multiple legacy codeless automations to proper app integrations with enhanced functionality such as comprehensive logging and error handling. This involved developing a robust migration plan, coordinating with stakeholders, and implementing the changes while minimizing disruption to the existing system. The resulting solution improved overall efficiency and reduced the risk of errors or system failures, leading to increased productivity and cost savings.</p></p></li>
-              <li><p><p>Developed a robust Salesforce integration that aligned with our internal data structures and sales pipelines. This integration enabled us to seamlessly manage and track our growing number of applicants, which increased from a few hundred to tens of thousands since I joined.</p></p></li>
-              <li><p><p>Improved our authentication services from a basic email and password setup to a more robust system that supports single sign-on (SSO) and passwordless login. To achieve this, I implemented Auth0 and NextAuth.js, which provided a secure, scalable, and flexible solution. The implementation involved developing a migration plan, configuring the new authentication services, and conducting thorough testing and documentation. The improved authentication services significantly enhanced our users' experience, improved security, and reduced the risk of credential-related issues.</p></p></li>
-              <li><p><p>Played a critical role in successfully managing multiple large-scale, technically complex transitions. These transitions included rebuilding the entire app and switching card issuing services, among others. I worked closely with cross-functional teams to plan and execute the transitions, ensuring minimal disruption to the existing system and maintaining a high level of communication throughout the process.</p></p></li>
+              <li><p><p>Designed and developed backend systems supporting credit card reward programs and a user-friendly reward shop for point redemption, integrating third-party APIs for a seamless experience.</p></p></li>
+              <li><p><p>Led the migration of legacy codeless automations to robust app integrations, enhancing functionality, and efficiency while minimizing disruptions. This saved the company tens of thousands of dollars a year.</p></p></li>
+              <li><p><p>Developed a Salesforce integration aligning with internal structures, enabling efficient management of a growing applicant base.</p></p></li>
+              <li><p><p>Improved authentication services with Auth0 and NextAuth.js, enhancing security and user experience with single sign-on and passwordless login.</p></p></li>
+              <li><p><p>Successfully managed large-scale, technically complex transitions, including app rebuilding and card issuing service changes, through effective cross-functional coordination.</p></p></li>
             </ul>
           </div>
         </section>
@@ -1035,29 +1022,7 @@ section .location {
                 <li><p><p>Developed and implemented post, comment, and connection functionality similar to LinkedIn, enabling users to engage with one another and build their professional networks. The feature was designed with scalability, reliability, and security in mind, and it significantly improved user engagement and satisfaction.</p></p></li>
               </ul>   
           </div>
-        </section>
-        <section class="work-item">
-          
-          <label for="work-item-2"></label>
-          
-          <header class="clear">
-            <div class="date">
-              <span class="startDate">May 2020</span>
-              <span class="endDate">- Sep 2020</span>
-            </div>
-            <div class="position">Coding Boot Camp Tutor</div>
-            <div class="company">2U</div>
-          </header>
-    
-          <span class="fas fa-map-marker-alt"></span>
-          <span class="location">Remote</span>
-          <span class="url">
-            <span class="fas fa-external-link-alt"></span>
-            <a target="_blank" href="https://www.linkedin.com/company/2u/">https://www.linkedin.com/company/2u/</a>
-          </span>        <div class="item" id="work-item">
-            <div class="summary"><p><p>Conducted hour long one-on-one tutoring sessions with coding bootcamp students focused on live code review for full stack web development.</p></p></div>
-          </div>
-        </section>
+        </section>        
         <section class="work-item">
     
           <label for="work-item-3"></label>
@@ -1128,22 +1093,6 @@ section .location {
           <div class="item">
           </div>
         </section>
-      </section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>References</h2>
-      </header>
-      <section id="references">
-        <div class="item">
-          <blockquote class="reference">
-            &#8220;&#32;What else can I say other than &quot;Tommy is great&quot;? Tommy has everything that makes a good teammate: curiosity, drive, determination, communication, and a wonderful sense of humor. In the time that we worked together at Karat Financial, Tommy could always be counted on to work cross-functionally to get the information and the buy-in needed from other departments in order to deliver and ship impactful features. Working with Tommy was an absolute blast, and I would recommend him wholeheartedly.&#32;&#8221;
-          </blockquote>
-          <div class="name">
-            Adam Reid
-            
-          </div>
-        </div>
       </section>
     </section>
 
